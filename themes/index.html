@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=d42108af24">
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=1e31bfb436">
 
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="canonical" href="index.html">
@@ -34,8 +34,6 @@
     <meta name="twitter:data1" content="Ghost">
     <meta name="twitter:label2" content="Filed under">
     <meta name="twitter:data2" content="Getting Started">
-    <meta property="og:image:width" content="1400">
-    <meta property="og:image:height" content="1050">
     
     <script type="application/ld+json">
 {
@@ -61,12 +59,7 @@
     "url": "http://localhost:2368/themes/",
     "datePublished": "2018-01-02T18:42:34.000Z",
     "dateModified": "2018-01-02T18:42:34.000Z",
-    "image": {
-        "@type": "ImageObject",
-        "url": "https://casper.ghost.org/v1.0.0/images/design.jpg",
-        "width": 1400,
-        "height": 1050
-    },
+    "image": "https://casper.ghost.org/v1.0.0/images/design.jpg",
     "keywords": "Getting Started",
     "description": "Creating a totally custom design for your publication Ghost comes with a beautiful default theme called Casper, which is designed to be a clean, readable publication layout and can be easily adapted for most purposes. However, Ghost can also be completely themed to suit your needs. Rather than just giving",
     "mainEntityOfPage": {
@@ -76,7 +69,7 @@
 }
     </script>
 
-    <script type="text/javascript" src="../public/ghost-sdk.js?v=d42108af24"></script>
+    <script type="text/javascript" src="../public/ghost-sdk.js?v=1e31bfb436"></script>
 <script type="text/javascript">
 ghost.init({
 	clientId: "ghost-frontend",
@@ -85,6 +78,15 @@ ghost.init({
 </script>
     <meta name="generator" content="Ghost 1.19">
     <link rel="alternate" type="application/rss+xml" title="Ghost Paper" href="../rss/index.html">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112035976-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112035976-1');
+</script>
 
 </head>
 <body class="post-template tag-getting-started">
@@ -106,8 +108,7 @@ ghost.init({
     <div class="site-nav-right">
         <div class="social-links">
         </div>
-            <a class="rss-button" href="http://cloud.feedly.com/#subscription/feed/http://localhost:2368/rss/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"></circle><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"></path></svg>
-</a>
+            <a class="subscribe-button" href="index.html#subscribe">Subscribe</a>
     </div>
 </nav>
     </div>
@@ -151,6 +152,21 @@ ghost.init({
 </div>
             </section>
 
+            <section class="subscribe-form">
+                <h3 class="subscribe-form-title">Subscribe to Ghost Paper</h3>
+                <p>Get the latest posts delivered right to your inbox</p>
+                <form method="post" action="http://localhost:2368/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"><input class="location" type="hidden" name="location"><input class="referrer" type="hidden" name="referrer">
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email" placeholder="youremail@example.com">
+    </div>
+    <button class="" type="submit"><span>Subscribe</span></button>
+    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+</form>
+
+
+            </section>
 
             <footer class="post-full-footer">
 
@@ -166,6 +182,21 @@ ghost.init({
 
             </footer>
 
+            <section class="post-full-comments">
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = 'http://localhost:2368/themes/';
+                        this.page.identifier = 'ghost-5a4bd29a1becf11080b8cc41';
+                    };
+                    (function() {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://https-ghostpaper-github-io.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+            </section>
 
         </article>
 
@@ -261,10 +292,28 @@ ghost.init({
 
     </div>
 
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="index.html#"></a>
+        <div class="subscribe-overlay-content">
+            <h1 class="subscribe-overlay-title">Subscribe to Ghost Paper</h1>
+            <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+            <form method="post" action="http://localhost:2368/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"><input class="location" type="hidden" name="location"><input class="referrer" type="hidden" name="referrer">
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email" placeholder="youremail@example.com">
+    </div>
+    <button class="" type="submit"><span>Subscribe</span></button>
+    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+</form>
+
+
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=d42108af24"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=1e31bfb436"></script>
 
 
     <script>
